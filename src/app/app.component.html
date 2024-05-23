@@ -227,12 +227,6 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-      <h1>Usuarios</h1>
-      <ul>
-        <li *ngFor="let user of users">
-          {{ user.name }} - {{ user.email }}
-        </li>
-      </ul>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -338,5 +332,5 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
+<app-users></app-users>
 <router-outlet />

@@ -1,0 +1,11 @@
+<p>users works!</p>
+<div>
+    <h1>Alumnos - Grupo 3</h1>
+    <ul>
+        @for (user of users; track $index){
+            <li>
+                {{ user.name }} - {{ user.email }}
+            </li>
+        }
+    </ul>
+  </div>

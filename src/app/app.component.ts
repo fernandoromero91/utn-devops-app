@@ -1,29 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ApiService } from './api.service';
+import { UsersComponent } from './components/users/users.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, UsersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  users:any[] =[];
-  constructor(private apiService: ApiService){}
-
-
-  ngOnInit(): void {
-    this.apiService.getUsers().subscribe(
-      (data) => {
-        this.users=data;
-        console.log(this.users);
-      },
-      (error) => {
-        console.log(this.users);
-      }
-    )
-  }
+export class AppComponent {
   title = 'utn-devops-app';
 }
